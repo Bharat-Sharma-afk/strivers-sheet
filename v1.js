@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+// Accessing Hooks from the global React object (provided by the CDN in index.html)
+const { useState, useEffect } = React;
 
 const topics = [
   {
@@ -389,7 +390,7 @@ const difficultyConfig = {
   Hard: { color: "#ff375f", bg: "rgba(255,55,95,0.12)" },
 };
 
-export default function App() {
+function App() {
   const [openTopics, setOpenTopics] = useState({});
   const [filter, setFilter] = useState("All");
   const [search, setSearch] = useState("");
@@ -404,11 +405,7 @@ export default function App() {
 
   const totalQuestions = topics.reduce((sum, t) => sum + t.questions.length, 0);
   const solvedCount = Object.values(completed).filter(Boolean).length;
-  const lcQuestions = topics.reduce(
-    (sum, t) => sum + t.questions.filter((q) => q.lc).length,
-    0
-  );
-
+  
   const toggleTopicVisibility = (id) =>
     setOpenTopics((prev) => ({ ...prev, [id]: !prev[id] }));
 
@@ -420,7 +417,7 @@ export default function App() {
   };
 
   const toggleTopicCompletion = (e, topic) => {
-    e.stopPropagation(); // Prevent opening the accordion
+    e.stopPropagation();
     const isAllChecked = topic.questions.every((_, i) => completed[`${topic.id}-${i}`]);
     const newState = { ...completed };
     topic.questions.forEach((_, i) => {
