@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JSX App</title>
+    <!-- Load React and ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Load Babel to compile JSX on the fly in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <!-- Put your JSX code directly inside this script tag -->
+    <script type="text/babel">
+        // Your JSX File Content Goes Here:
+        function MyComponent() {
+            return (
+                <div style={{ textAlign: 'center', marginTop: '50px' }}>
+                    <h1>Hello from my JSX file!</h1>
+                    <p>Published via GitHub Pages without npm.</p>
+                </div>
+            );
+        }
+
+        // Render the component into the DOM
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<MyComponent />);
+    </script>
+
+</body>
+</html>
