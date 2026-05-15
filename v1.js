@@ -450,7 +450,7 @@ function App() {
     <div style={styles.root}>
       <div style={styles.header}>
         <div style={styles.headerInner}>
-          <div style={styles.badge}>TakeUForward</div>
+          <div style={styles.badge}>BHARAT SHARMA</div>
           <h1 style={styles.title}>Striver's SDE Sheet</h1>
           <p style={styles.subtitle}>
             Top Coding Interview Problems — {solvedCount}/{totalQuestions} Completed
