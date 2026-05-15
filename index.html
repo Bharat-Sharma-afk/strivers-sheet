@@ -3,32 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My JSX App</title>
-    <!-- Load React and ReactDOM -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <!-- Load Babel to compile JSX on the fly in the browser -->
+    <title>Striver's SDE Sheet Tracker</title>
+    
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
 
     <div id="root"></div>
 
-    <!-- Put your JSX code directly inside this script tag -->
-    <script type="text/babel">
-        // Your JSX File Content Goes Here:
-        function MyComponent() {
-            return (
-                <div style={{ textAlign: 'center', marginTop: '50px' }}>
-                    <h1>Hello from my JSX file!</h1>
-                    <p>Published via GitHub Pages without npm.</p>
-                </div>
-            );
-        }
+    <script type="text/babel" src="v1.js"></script>
 
-        // Render the component into the DOM
+    <script type="text/babel">
         const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<MyComponent />);
+        // App is the function name inside your v1.js
+        root.render(<App />);
     </script>
 
 </body>
